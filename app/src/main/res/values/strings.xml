@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Who want to be a millionaire</string>
+    <string name="who">Кто хочет стать миллионером?</string>
+    <string name="play">ИГРАТЬ</string>
+    <string name="next">Следующий вопрос</string>
+    <string name="_50_50">50/50</string>
+    <string name="answ4">Ответ 4</string>
+    <string name="answ3">Ответ 3</string>
+    <string name="answ2">Ответ 2</string>
+    <string name="answ1">Ответ 1</string>
+    <string name="quest">В каком году, что то там произошло?</string>
+    <string name="quest1">Вопрос № 1:</string>
+    <string name="_1_x">Вопрос: 1/x</string>
+    <string name="_0">Счет: 0</string>
+    <string name="gameover">К сожалению, выбранный вами ответ - неверный. Вы проиграли!</string>
+    <string name="win">Вы ответили правильно на все вопросы. Поздравляю! Вы миллионер!</string>
+</resources>

@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Who want to be a millionaire"
