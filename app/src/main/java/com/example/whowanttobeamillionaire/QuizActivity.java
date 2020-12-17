@@ -48,6 +48,8 @@ public class QuizActivity extends AppCompatActivity
     private boolean answered;
     Dialog dialog;
 
+    private int counter = 0;
+
     public static final String EXTRA_SCORE = "extraScore";
 
     @Override
@@ -144,6 +146,10 @@ public class QuizActivity extends AppCompatActivity
             {
                 int i = 0;
                 int previousNumber = 0;
+                counter++;
+                if (counter >= 2) {
+                    buttonFifth.setEnabled(false);
+                }
                 while (true)
                 {
                     Random random = new Random();
