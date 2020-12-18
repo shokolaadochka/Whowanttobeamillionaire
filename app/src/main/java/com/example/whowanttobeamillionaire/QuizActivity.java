@@ -50,6 +50,8 @@ public class QuizActivity extends AppCompatActivity
 
     private int counter = 0;
 
+    Handler handler = new Handler();
+
     public static final String EXTRA_SCORE = "extraScore";
 
     @Override
@@ -245,35 +247,40 @@ public class QuizActivity extends AppCompatActivity
     }
 
     private void showSolution()
-    {
-        radioButton1.setTextColor(Color.RED);
-        radioButton2.setTextColor(Color.RED);
-        radioButton3.setTextColor(Color.RED);
-        radioButton4.setTextColor(Color.RED);
-        switch (currentQuestion.getAnswerNr())
-        {
-            case 1:
-                radioButton1.setTextColor(Color.GREEN);
-                break;
-            case 2:
-                radioButton2.setTextColor(Color.GREEN);
-                break;
-            case 3:
-                radioButton3.setTextColor(Color.GREEN);
-                break;
-            case 4:
-                radioButton4.setTextColor(Color.GREEN);
-                break;
+    {handler.postDelayed(new Runnable() {
+        public void run() {
+            radioButton1.setTextColor(Color.RED);
+            radioButton2.setTextColor(Color.RED);
+            radioButton3.setTextColor(Color.RED);
+            radioButton4.setTextColor(Color.RED);
+            switch (currentQuestion.getAnswerNr())
+            {
+                case 1:
+                    radioButton1.setTextColor(Color.GREEN);
+                    break;
+                case 2:
+                    radioButton2.setTextColor(Color.GREEN);
+                    break;
+                case 3:
+                    radioButton3.setTextColor(Color.GREEN);
+                    break;
+                case 4:
+                    radioButton4.setTextColor(Color.GREEN);
+                    break;
+            }
+            if (questionCounter < questionCountTotal)
+            {
+                buttonNext.setText("Next");
+            }
+            else
+            {
+                buttonNext.setText("Finish");
+            }
         }
-        if (questionCounter < questionCountTotal)
-        {
-            buttonNext.setText("Next");
+    }, 2000);
         }
-        else
-        {
-            buttonNext.setText("Finish");
-        }
-    }
+
+
 
     private void finishQuiz()
     {
